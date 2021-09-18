@@ -7,7 +7,9 @@ describe("New User App", ()=>{
     const button = () => cy.get('button')
     const sauce = () => cy.get('input[name=sauce]')
 
-
+    const pepperoni = () => cy.get('input[name=pepperoni')
+    const sausage = () => cy.get('input[name=sausage')
+    const onions = () => cy.get('input[name=onions')
 
     describe('filling out inputs and button', () =>{
         it('Checking For Inputs', ()=>{
@@ -22,6 +24,12 @@ describe("New User App", ()=>{
         })
         it('submit button starts out disabled', ()=>{
             button().should('be.disabled');
+        })
+
+        it('checks', () =>{
+            pepperoni().check();
+            sausage().check();
+            onions().check();
         })
     })
 })
